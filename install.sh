@@ -75,13 +75,6 @@ function install_pterodactyl() {
     sudo systemctl enable redis-server
     sudo systemctl start redis-server
 
-    # Periksa status Redis
-    sudo systemctl status redis-server
-    if [[ $? -ne 0 ]]; then
-        echo "Redis gagal dimulai. Silakan periksa log untuk detail lebih lanjut."
-        exit 1
-    fi
-
     # Install Composer
     echo_color "══════════════════════════════════════════════"
     echo_color "> Installing Composer"
